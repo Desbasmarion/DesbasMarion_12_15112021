@@ -1,0 +1,19 @@
+.Column {
+  background-color: #020203;
+  width: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 780px;
+  img {
+    margin-top: 50%;
+    width: 70%;
+  }
+  span {
+    font-size: 10px;
+    width: 70%;
+    color: white;
+    transform: rotate(270deg);
+  }
+}
