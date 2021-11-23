@@ -3,7 +3,7 @@ import React from 'react';
 const Inconstruction = () => {
 	return (
 		<div className='Inconstruction'>
-           🚧 Page en construction 🚧
+			<span>🚧 Page en construction 🚧</span>
 		</div>
 	);
 };
