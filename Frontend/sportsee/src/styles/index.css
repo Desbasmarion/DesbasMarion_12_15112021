@@ -84,4 +84,73 @@ body {
   right: 50%;
   top: 50%;
 }
+
+.custom-tooltip {
+  background-color: #e60000;
+  color: white;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  font-weight: 100;
+  padding: 4px;
+}
+
+.Barchart {
+  background-color: #fbfbfb;
+  width: 70%;
+  padding-top: 1%;
+  padding-left: 2%;
+}
+
+.legendContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.legendContainer .legend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 45%;
+}
+
+.legendContainer .legend span {
+  font-size: 12px;
+}
+
+.legendContainer .legend i {
+  font-size: 10px;
+  margin-right: 3%;
+}
+
+.legendContainer .legend .weight {
+  width: 50%;
+}
+
+.legendContainer .legend .weight i {
+  color: #282d30;
+}
+
+.legendContainer .legend .calories {
+  width: 50%;
+}
+
+.legendContainer .legend .calories i {
+  color: #e60000;
+}
+
+.Linechart {
+  background-color: #ff0000;
+  width: 30%;
+  border-radius: 5px;
+  height: 250px;
+}
 /*# sourceMappingURL=index.css.map */
