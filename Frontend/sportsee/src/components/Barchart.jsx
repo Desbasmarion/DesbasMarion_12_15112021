@@ -4,10 +4,6 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 
 export default function Barchart({ data }) {
 
-	Barchart.propTypes = {
-		data: PropTypes.array
-	};
-
 	const formatXAxis = (tickItem) => {
 		return tickItem + 1;
 	};
@@ -27,11 +23,17 @@ export default function Barchart({ data }) {
 		return null;
 	};
 
+	//PropTypes
+	Barchart.propTypes = {
+		data: PropTypes.array
+	};
+
 	CustomTooltip.propTypes = {
 		active: PropTypes.bool,
 		payload: PropTypes.array
 	};
-
+	
+	
 	return (
 		<div className='Barchart'>
 			<div className='legendContainer'>

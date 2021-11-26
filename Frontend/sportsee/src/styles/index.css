@@ -152,5 +152,46 @@ body {
   width: 30%;
   border-radius: 5px;
   height: 250px;
+  position: relative;
+  padding-top: 1%;
+}
+
+.Linechart h2 {
+  color: white;
+  opacity: 0.5;
+  font-size: 15px;
+  width: 50%;
+  margin-left: 7%;
+}
+
+.Linechart .recharts-responsive-container {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  border-radius: 5px;
+  z-index: 30;
+  height: 100%;
+}
+
+.Linechart .custom-tooltip {
+  background-color: white;
+  color: black;
+}
+
+.formatXAxis {
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.formatXAxis span {
+  color: #ffffff;
+  opacity: 0.5;
 }
 /*# sourceMappingURL=index.css.map */

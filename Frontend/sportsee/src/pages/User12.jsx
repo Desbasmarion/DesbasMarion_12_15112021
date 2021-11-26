@@ -3,11 +3,13 @@ import Header from '../components/Header';
 import { useEffect, useState } from 'react';
 import Barchart from '../components/Barchart';
 import LineChart  from '../components/Linechart';
+import Radarchart from '../components/Radarchart';
+
 const User12 = () => {
 	const [mainData, setMainData ] =  useState([]);
 	const [activity, setActivity] = useState([]);
 	const [average, setAverage] = useState([]);
-	// const [performance, setPerformance] = useState([]);
+	const [performance, setPerformance] = useState([]);
 
 	const fetchMain = async() => {
 		const res = await fetch('../User12/mainData.json');
@@ -19,7 +21,7 @@ const User12 = () => {
 		fetchMain();
 		fetchActivity();
 		fetchAverage();
-		// fetchPerformance();
+		fetchPerformance();
 	}, []);
 
 	const fetchActivity = async() => {
@@ -34,11 +36,11 @@ const User12 = () => {
 		setAverage(answer.data);
 	};
 
-	// const fetchPerformance = async() => {
-	// 	const res = await fetch('../User12/performanceData.json');
-	// 	const answer = await res.json();
-	// 	setPerformance(answer.data);
-	// };
+	const fetchPerformance = async() => {
+		const res = await fetch('../User12/performanceData.json');
+		const answer = await res.json();
+		setPerformance(answer.data);
+	};
 	
 	
 	return (
@@ -52,6 +54,7 @@ const User12 = () => {
 				: 'chargement'}
 			<Barchart data={activity.sessions} />
 			<LineChart data={average.sessions} />
+			<Radarchart data={performance.data}/>
 		</div>
 	);
 };
