@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Barchart from '../components/Barchart';
 import LineChart  from '../components/Linechart';
 import Radarchart from '../components/Radarchart';
+import Radialbarchart from '../components/Radialbarchart';
 
 const User12 = () => {
 	const [mainData, setMainData ] =  useState([]);
@@ -54,7 +55,8 @@ const User12 = () => {
 				: 'chargement'}
 			<Barchart data={activity.sessions} />
 			<LineChart data={average.sessions} />
-			<Radarchart data={performance.data}/>
+			<Radarchart data={performance.data} />
+			<Radialbarchart data={mainData.todayScore}/>
 		</div>
 	);
 };
