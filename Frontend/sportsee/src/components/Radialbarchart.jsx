@@ -1,41 +1,31 @@
 import React from 'react';
-import { RadialBarChart, RadialBar, Legend } from 'recharts';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import PropTypes from 'prop-types';
 
 const Radialbarchart = ({ data }) => {
 
-	//PropTypes
+	//PropTypes;
 	Radialbarchart.propTypes = {
 		data: PropTypes.number
 	};
-
+	
+	const percentage = data * 100;
+	
 	return (
-		<div>
-			<RadialBarChart
-				width={500}
-				height={300}
-				cx={150}
-				cy={150}
-				innerRadius={20}
-				outerRadius={140}
-				barSize={10}
-				data={data}
-			>
-				<RadialBar
-					minAngle={15}
-					label={{ position: 'insideStart', fill: 'red' }}
-					background
-					clockWise
-					dataKey={data}
-				/>
-				<Legend
-					iconSize={10}
-					width={120}
-					height={140}
-					layout="vertical"
-					verticalAlign="middle"
-				/>
-			</RadialBarChart>
+		<div className="Radialbarchart">
+			<CircularProgressbar
+				value={percentage}
+				text={`${percentage}% de votre objectif`}
+				styles={buildStyles({
+					textColor: 'black',
+					pathColor: '#FF0000',
+					trailColor: 'white',
+					strokeLinecap: 'round',
+					textSize: '14px'
+				})}
+				strokeWidth={5}
+				
+			/>
 		</div>
 	);
 };
