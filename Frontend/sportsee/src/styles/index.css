@@ -207,4 +207,74 @@ body {
   height: 300px;
   background-color: #fbfbfb;
 }
+
+.Cardinfos {
+  background-color: #fbfbfb;
+  width: 15%;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  border-radius: 5px;
+  margin-bottom: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Cardinfos .fa-fire-alt,
+.Cardinfos .fa-drumstick-bite,
+.Cardinfos .fa-apple-alt,
+.Cardinfos .fa-hamburger {
+  border-radius: 6px;
+  width: 65px;
+  height: 50px;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.Cardinfos .fa-fire-alt {
+  background-color: rgba(255, 0, 0, 0.07);
+  color: red;
+}
+
+.Cardinfos .fa-drumstick-bite {
+  background-color: #4ab8ff1a;
+  color: #4ab8ff;
+}
+
+.Cardinfos .fa-apple-alt {
+  background-color: #fdcd0c27;
+  color: #fdcc0c;
+}
+
+.Cardinfos .fa-hamburger {
+  background-color: #fd51811a;
+  color: #fd5181;
+}
+
+.Cardinfos .score {
+  font-weight: bold;
+  color: #282d30;
+}
+
+.Cardinfos .types {
+  color: #74798c;
+}
+
+.Cardinfos div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 /*# sourceMappingURL=index.css.map */

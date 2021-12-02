@@ -1,0 +1,49 @@
+.Cardinfos {
+  background-color: #fbfbfb;
+  width: 15%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  border-radius: 5px;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  align-items: center;
+  .fa-fire-alt,
+  .fa-drumstick-bite,
+  .fa-apple-alt,
+  .fa-hamburger {
+    border-radius: 6px;
+    width: 65px;
+    height: 50px;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 15px;
+  }
+  .fa-fire-alt {
+    background-color: rgba(255, 0, 0, 0.07);
+    color: red;
+  }
+  .fa-drumstick-bite {
+    background-color: #4ab8ff1a;
+    color: #4ab8ff;
+  }
+  .fa-apple-alt {
+    background-color: #fdcd0c27;
+    color: #fdcc0c;
+  }
+  .fa-hamburger {
+    background-color: #fd51811a;
+    color: #fd5181;
+  }
+  .score {
+    font-weight: bold;
+    color: #282d30;
+  }
+  .types {
+    color: #74798c;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}

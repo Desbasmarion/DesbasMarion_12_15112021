@@ -5,6 +5,7 @@ import Barchart from '../components/Barchart';
 import LineChart  from '../components/Linechart';
 import Radarchart from '../components/Radarchart';
 import Radialbarchart from '../components/Radialbarchart';
+import Cardinfos from '../components/Cardinfos';
 
 const User12 = () => {
 	const [mainData, setMainData ] =  useState([]);
@@ -43,7 +44,6 @@ const User12 = () => {
 		setPerformance(answer.data);
 	};
 	
-	
 	return (
 		<div className='User12'>
 			<Header />
@@ -57,6 +57,10 @@ const User12 = () => {
 			<LineChart data={average.sessions} />
 			<Radarchart data={performance.data} />
 			<Radialbarchart data={mainData.todayScore}/>
+			<Cardinfos icon='fas fa-fire-alt' score={mainData?.keyData?.calorieCount} unity='kCal' types='Calories'/>
+			<Cardinfos icon='fas fa-drumstick-bite' score={mainData?.keyData?.proteinCount} unity='g' types='Protéines'/>
+			<Cardinfos icon='fas fa-apple-alt' score={mainData?.keyData?.carbohydrateCount} unity='g' types='Glucides'/>
+			<Cardinfos icon='fas fa-hamburger' score={mainData?.keyData?.lipidCount} unity='g' types='Lipides'/>
 		</div>
 	);
 };
