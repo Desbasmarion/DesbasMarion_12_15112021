@@ -63,7 +63,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 1024px;
+  position: absolute;
 }
 
 .Column img {

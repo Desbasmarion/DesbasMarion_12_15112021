@@ -5,7 +5,7 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } fro
 const Radarchart = ({ data }) => {
 	//PropTypes
 	Radarchart.propTypes = {
-		data: PropTypes.array
+		data: PropTypes.object
 	};
 
 	const formatAngleAxis = (kind) => {
