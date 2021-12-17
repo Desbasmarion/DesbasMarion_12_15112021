@@ -12,41 +12,41 @@ import fetchData  from '../services/fetchData';
 const User = () => {
 
 	const urlParams = useParams();
-	const idParam = urlParams.id;
-	console.log(idParam);
-	
+	const idParam = urlParams.id;	
 
-	//Recovery users data
-	
+	//Recovery users mocked data
 	const mainData = fetchData('../' + idParam + '/mainData.json');
-	console.log(mainData);
+	const average = fetchData('../' + idParam + '/averageSessionData.json');
+	const activity = fetchData('../' + idParam + '/activityData.json');
+	const performance = fetchData('../' + idParam + '/performanceData.json');
 
-	fetchData('../' + idParam + '/averageSessionData.json');
-	fetchData('../' + idParam + '/activityData.json');
-	fetchData('../' + idParam + '/performanceData.json');
-
-	const activity = 'test';
-	const average = 'test';
+	//Recovery API data
+	// const mainData = fetchData('http://localhost:3000/user/' + idParam);
+	// const average = fetchData('http://localhost:3000/user/' + idParam + '/average-sessions');
+	// const activity = fetchData('http://localhost:3000/user/' + idParam + '/activity');
+	// const performance = fetchData('http://localhost:3000/user/' + idParam + '/performance');
 
 	return (
-		<div className='User12'>
+		<div className='User'>
 			<Header />
 			<Column />
-			{mainData?.userInfos?.firstName ? 
+			{mainData?.data?.userInfos?.firstName ? 
 				<Fragment>
-					<p>Bonjour {mainData?.userInfos?.firstName}</p> 
-					<p>Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
+					<p className='name'>Bonjour <span>{mainData?.data?.userInfos?.firstName}</span></p> 
+					<p className='congrats'>Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
 				</Fragment>
 				: 'chargement'}
 			<section className='chartsContainer'>
-				<Barchart data={activity?.sessions} />
-				<LineChart data={average?.sessions} />
-				<Radarchart data={performance?.data} />
-				<Radialbarchart data={mainData?.todayScore}/>
-				<Cardinfos icon='fas fa-fire-alt' score={mainData?.keyData?.calorieCount} unity='kCal' types='Calories'/>
-				<Cardinfos icon='fas fa-drumstick-bite' score={mainData?.keyData?.proteinCount} unity='g' types='Protéines'/>
-				<Cardinfos icon='fas fa-apple-alt' score={mainData?.keyData?.carbohydrateCount} unity='g' types='Glucides'/>
-				<Cardinfos icon='fas fa-hamburger' score={mainData?.keyData?.lipidCount} unity='g' types='Lipides'/>
+				<Barchart data={activity?.data?.sessions} />
+				<LineChart data={average?.data?.sessions} />
+				<Radarchart data={performance?.data?.data} />
+				<Radialbarchart data={mainData?.data?.todayScore}/>
+				<section className='cardsContainer'>
+					<Cardinfos icon='fas fa-fire-alt' score={mainData?.data?.keyData?.calorieCount} unity='kCal' types='Calories'/>
+					<Cardinfos icon='fas fa-drumstick-bite' score={mainData?.data?.keyData?.proteinCount} unity='g' types='Protéines'/>
+					<Cardinfos icon='fas fa-apple-alt' score={mainData?.data?.keyData?.carbohydrateCount} unity='g' types='Glucides'/>
+					<Cardinfos icon='fas fa-hamburger' score={mainData?.data?.keyData?.lipidCount} unity='g' types='Lipides'/>
+				</section>
 			</section>
 		</div>
 	);

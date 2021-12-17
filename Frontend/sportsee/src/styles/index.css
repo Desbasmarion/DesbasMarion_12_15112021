@@ -25,6 +25,8 @@
 
 body {
   margin: 0 auto;
+  min-width: 1024px;
+  min-height: 780px;
 }
 
 .Header {
@@ -50,6 +52,7 @@ body {
 .Column {
   background-color: #020203;
   width: 8%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,8 +70,8 @@ body {
 }
 
 .Column img {
-  margin-top: 50%;
-  width: 70%;
+  margin-top: 80%;
+  width: 55%;
 }
 
 .Column span {
@@ -100,6 +103,8 @@ body {
   width: 70%;
   padding-top: 1%;
   padding-left: 2%;
+  margin-top: 3%;
+  height: 300px;
 }
 
 .legendContainer {
@@ -109,7 +114,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 .legendContainer .legend {
@@ -210,18 +215,15 @@ body {
 
 .Cardinfos {
   background-color: #fbfbfb;
-  width: 15%;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
   border-radius: 5px;
-  margin-bottom: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -276,5 +278,47 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.User {
+  position: relative;
+}
+
+.User p {
+  margin-left: 12%;
+}
+
+.User .chartsContainer {
+  margin-left: 12%;
+}
+
+.User .name {
+  font-size: 40px;
+  margin-bottom: 2%;
+}
+
+.User .name span {
+  color: red;
+}
+
+.User .congrats {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.User .cardsContainer {
+  position: absolute;
+  top: 10%;
+  right: 7%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 /*# sourceMappingURL=index.css.map */
