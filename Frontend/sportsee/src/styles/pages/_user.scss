@@ -5,9 +5,10 @@
   }
   .chartsContainer {
     margin-left: 12%;
+    position: relative;
   }
   .name {
-    font-size: 40px;
+    font-size: 35px;
     margin-bottom: 2%;
     span {
       color: red;
@@ -19,11 +20,18 @@
   }
   .cardsContainer {
     position: absolute;
-    top: 10%;
+    top: 0;
     right: 7%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+  .bottomContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 230px;
+    margin-top: 7%;
   }
 }

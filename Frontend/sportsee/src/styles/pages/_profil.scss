@@ -1,0 +1,23 @@
+.Profil {
+  position: relative;
+  min-height: 780px;
+  .linksContainer {
+    margin-left: 40%;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+  }
+  p {
+    margin-left: 31%;
+    margin-top: 15%;
+  }
+  .user {
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    width: 40%;
+    padding: 3%;
+    text-align: center;
+  }
+}

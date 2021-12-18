@@ -27,9 +27,9 @@ const Linechart = ({ data }) => {
 	return (
 		<div className='Linechart'>
 			<h2>Durée moyenne des sessions</h2>
-			<ResponsiveContainer width="100%" height="100%" >
+			<ResponsiveContainer width="100%" height="80%">
 				<LineChart width="100%" height="100%" data={data} margin={0}>
-					<Line type="monotone" dataKey="sessionLength" stroke="white" opacity="0.5" strokeWidth="2" dot={false} height="100%"/>
+					<Line type="monotone" dataKey="sessionLength" stroke="white" opacity="0.5" strokeWidth="2" dot={false} height="100%" />
 					<CartesianGrid vertical={false} horizontal={false} />
 					<XAxis dataKey="day" tickLine={false} axisLine={false} tick={false} />
 					<YAxis hide={true} />

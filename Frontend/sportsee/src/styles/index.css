@@ -63,9 +63,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: absolute;
 }
 
@@ -76,7 +75,6 @@ body {
 
 .Column span {
   font-size: 10px;
-  width: 70%;
   color: white;
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
@@ -84,8 +82,8 @@ body {
 
 .Inconstruction {
   position: absolute;
-  right: 50%;
-  top: 50%;
+  left: 45%;
+  top: 40%;
 }
 
 .custom-tooltip {
@@ -154,28 +152,23 @@ body {
 
 .Linechart {
   background-color: #ff0000;
-  width: 30%;
+  width: 31%;
   border-radius: 5px;
-  height: 250px;
+  height: 100%;
   position: relative;
-  padding-top: 1%;
 }
 
 .Linechart h2 {
   color: white;
   opacity: 0.5;
-  font-size: 15px;
+  font-size: 12px;
   width: 50%;
   margin-left: 7%;
 }
 
 .Linechart .recharts-responsive-container {
-  position: absolute;
-  top: 0%;
-  bottom: 0%;
   border-radius: 5px;
   z-index: 30;
-  height: 100%;
 }
 
 .Linechart .custom-tooltip {
@@ -201,16 +194,56 @@ body {
 }
 
 .Radarchart {
-  height: 300px;
+  height: 100%;
   background-color: #282d30;
-  width: 50%;
+  width: 31%;
   border-radius: 5px;
 }
 
 .Radialbarchart {
-  width: 300px;
-  height: 300px;
-  background-color: #fbfbfb;
+  width: 31%;
+  height: 100%;
+  background-color: #f1eeee;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  position: relative;
+  border-radius: 5px;
+}
+
+.Radialbarchart .recharts-responsive-container {
+  margin-left: 10%;
+}
+
+.Radialbarchart span {
+  margin-left: 5%;
+}
+
+.Radialbarchart .percentageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.Radialbarchart .percentageContainer .legend {
+  color: #282d30;
+  opacity: 0.8;
+}
+
+.Radialbarchart .percentageContainer .percentage {
+  font-size: 27px;
 }
 
 .Cardinfos {
@@ -280,6 +313,10 @@ body {
           flex-direction: column;
 }
 
+.Cardinfos span {
+  margin-left: 15%;
+}
+
 .User {
   position: relative;
 }
@@ -290,10 +327,11 @@ body {
 
 .User .chartsContainer {
   margin-left: 12%;
+  position: relative;
 }
 
 .User .name {
-  font-size: 40px;
+  font-size: 35px;
   margin-bottom: 2%;
 }
 
@@ -308,7 +346,7 @@ body {
 
 .User .cardsContainer {
   position: absolute;
-  top: 10%;
+  top: 0;
   right: 7%;
   height: 100%;
   display: -webkit-box;
@@ -318,7 +356,66 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.User .bottomContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+  height: 230px;
+  margin-top: 7%;
+}
+
+.Profil {
+  position: relative;
+  min-height: 780px;
+}
+
+.Profil .linksContainer {
+  margin-left: 40%;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Profil p {
+  margin-left: 31%;
+  margin-top: 15%;
+}
+
+.Profil .user {
+  text-decoration: none;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  width: 40%;
+  padding: 3%;
+  text-align: center;
+}
+
+.Home {
+  position: relative;
+  min-height: 780px;
+}
+
+.Settings {
+  position: relative;
+  min-height: 780px;
+}
+
+.Community {
+  position: relative;
+  min-height: 780px;
 }
 /*# sourceMappingURL=index.css.map */

@@ -38,10 +38,10 @@ const Radarchart = ({ data }) => {
 	
 	return (
 		<div className='Radarchart'>
-			<ResponsiveContainer width="90%" height="100%">
-				<RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+			<ResponsiveContainer width="100%" height="100%">
+				<RadarChart cx="50%" cy="50%" outerRadius="65%" data={data}>
 					<PolarGrid radialLines={false}/>
-					<PolarAngleAxis dataKey="kind" stroke='white' tickLine={false} tickFormatter={(kind) => formatAngleAxis(kind)}/>
+					<PolarAngleAxis dataKey="kind" stroke='white' tickLine={false} tickFormatter={(kind) => formatAngleAxis(kind)} style={{fontSize: 10}}/>
 					<Radar name="Mike" dataKey="value" stroke="#FF0101B2" fill="#FF0101B2" fillOpacity={0.6} />
 				</RadarChart>
 			</ResponsiveContainer>

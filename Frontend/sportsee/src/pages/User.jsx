@@ -38,9 +38,12 @@ const User = () => {
 				: 'chargement'}
 			<section className='chartsContainer'>
 				<Barchart data={activity?.data?.sessions} />
-				<LineChart data={average?.data?.sessions} />
-				<Radarchart data={performance?.data?.data} />
-				<Radialbarchart data={mainData?.data?.todayScore}/>
+				<section className='bottomContainer'>
+					<LineChart data={average?.data?.sessions} />
+					<Radarchart data={performance?.data?.data} />
+					<Radialbarchart data={mainData?.data?.todayScore}/>
+				</section>
+				
 				<section className='cardsContainer'>
 					<Cardinfos icon='fas fa-fire-alt' score={mainData?.data?.keyData?.calorieCount} unity='kCal' types='Calories'/>
 					<Cardinfos icon='fas fa-drumstick-bite' score={mainData?.data?.keyData?.proteinCount} unity='g' types='Protéines'/>
