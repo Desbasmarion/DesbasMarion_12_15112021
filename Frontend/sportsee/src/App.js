@@ -7,6 +7,10 @@ import Error from './pages/Error';
 import Settings from './pages/Settings';
 import User from './pages/User';
 
+/**
+ * Router application
+ * @returns all routes for the application 
+ */
 
 const App = () => {
 	return (

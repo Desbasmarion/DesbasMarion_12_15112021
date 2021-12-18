@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react';
 
+/**
+ * Custom Hook to recover data
+ * @param { String } url - API url or mocked data path
+ * @returns { Object | Boolean } data, isDataLoading, error
+ */
+
 const fetchData = (url) => {
 	const [data, setData] = useState({});
 	const [isDataLoading, setDataLoading] = useState(false);

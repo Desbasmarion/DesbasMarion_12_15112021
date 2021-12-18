@@ -2,7 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-export default function Barchart({ data }) {
+
+/**
+ * Barcharts construction with recharts components
+ * @param { Array } data - data fetched with API or mocked data  
+ */
+export default function Barchart( {data} ) {
+
+	Barchart.propTypes = {
+		data: PropTypes.array
+	};
 
 	const formatXAxis = (tickItem) => {
 		return tickItem + 1;
@@ -10,29 +19,20 @@ export default function Barchart({ data }) {
 
 	const CustomTooltip = ({ active, payload }) => {
 		if (active && payload && payload.length) {
-			
 			return (
 				<div className="custom-tooltip">
 					<p className="kg">{`${payload[0].value}kg`}</p>
 					<p className="kcal">{`${payload[1].value}Kcal`}</p>
-					
 				</div>
 			);
 		}
-	
 		return null;
-	};
-
-	//PropTypes
-	Barchart.propTypes = {
-		data: PropTypes.array
 	};
 
 	CustomTooltip.propTypes = {
 		active: PropTypes.bool,
 		payload: PropTypes.array
 	};
-	
 	
 	return (
 		<div className='Barchart'>
@@ -48,7 +48,6 @@ export default function Barchart({ data }) {
 						<span>Calories brûlées (kCal)</span>
 					</div>
 				</div>
-				
 			</div>
 			<ResponsiveContainer width="95%" height={300}>
 				<BarChart
@@ -61,7 +60,6 @@ export default function Barchart({ data }) {
 						left: 20,
 						bottom: 5
 					}}
-			
 				>
 					<CartesianGrid strokeDasharray="3 5" vertical={false} />
 					<XAxis tickFormatter={formatXAxis}  tickLine={false} tickSize="10" />
@@ -72,7 +70,6 @@ export default function Barchart({ data }) {
 				</BarChart>
 			</ResponsiveContainer>
 		</div>
-		
 	);
 }
   

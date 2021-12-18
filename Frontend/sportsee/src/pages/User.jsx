@@ -9,6 +9,11 @@ import Column from '../components/Column';
 import { useParams } from 'react-router-dom';
 import fetchData  from '../services/fetchData';
 
+/**
+ * User page component with mocked data or data fetched from API
+ * @returns all charts for 1 user - dynamic display
+ */
+
 const User = () => {
 
 	const urlParams = useParams();
@@ -43,7 +48,6 @@ const User = () => {
 					<Radarchart data={performance?.data?.data} />
 					<Radialbarchart data={mainData?.data?.todayScore}/>
 				</section>
-				
 				<section className='cardsContainer'>
 					<Cardinfos icon='fas fa-fire-alt' score={mainData?.data?.keyData?.calorieCount} unity='kCal' types='Calories'/>
 					<Cardinfos icon='fas fa-drumstick-bite' score={mainData?.data?.keyData?.proteinCount} unity='g' types='Protéines'/>

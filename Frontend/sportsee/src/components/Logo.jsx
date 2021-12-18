@@ -1,5 +1,9 @@
 import React from 'react';
 
+/**
+ * 
+ * @returns Logo component
+ */
 const Logo = () => {
 	return (
 		<div className='Logo'>

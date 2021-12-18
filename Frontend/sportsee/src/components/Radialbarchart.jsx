@@ -3,9 +3,13 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 
+/**
+ * Radialbarchart component
+ * @param { Number } data - data fetched with API or mocked data 
+ */
+
 const Radialbarchart = ({ data }) => {
 
-	//PropTypes;
 	Radialbarchart.propTypes = {
 		data: PropTypes.number
 	};
@@ -32,7 +36,6 @@ const Radialbarchart = ({ data }) => {
 					strokeWidth={5}
 				/>
 			</ResponsiveContainer>
-			
 		</div>
 	);
 };

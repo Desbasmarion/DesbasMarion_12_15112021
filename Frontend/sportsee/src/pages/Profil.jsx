@@ -3,6 +3,11 @@ import { NavLink } from 'react-router-dom';
 import Column from '../components/Column';
 import Header from '../components/Header';
 
+/**
+ * 
+ * @returns Profil page component using Navlink for redirection user12 or user 18
+ */
+
 const Profil = () => {
 
 	return (

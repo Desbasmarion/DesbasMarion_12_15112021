@@ -1,5 +1,9 @@
 import React from 'react';
 
+/**
+ * 
+ * @returns Column component
+ */
 const Column = () => {
 	return (
 		<div className='Column'>

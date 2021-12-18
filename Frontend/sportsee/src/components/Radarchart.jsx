@@ -2,10 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 
+/**
+ * Radarchart component
+ * @param { Array } data - data fetched with API or mocked data 
+ */
+
 const Radarchart = ({ data }) => {
-	//PropTypes
+
 	Radarchart.propTypes = {
-		data: PropTypes.object
+		data: PropTypes.array
 	};
 
 	const formatAngleAxis = (kind) => {

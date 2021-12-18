@@ -2,8 +2,17 @@ import React from 'react';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 
+
+/**
+ * Linechart component 
+ * @param { Array } data - data fetched with API or mocked data 
+ */
 const Linechart = ({ data }) => {
-	
+
+	Linechart.propTypes = {
+		data: PropTypes.array
+	};
+
 	const CustomTooltip = ({ active, payload }) => {
 		if (active && payload && payload.length) {
 			return (
@@ -12,13 +21,9 @@ const Linechart = ({ data }) => {
 				</div>
 			);
 		}
-	
 		return null;
 	};
-
-	Linechart.propTypes = {
-		data: PropTypes.array
-	};
+	
 	CustomTooltip.propTypes = {
 		active: PropTypes.bool,
 		payload: PropTypes.array
