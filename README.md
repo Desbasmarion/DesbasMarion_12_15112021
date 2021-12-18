@@ -1,4 +1,4 @@
-# DesbasMarion_12_15112021
+# SPORTSEE - React App
 Code for project 12 of DA Front-end path: a sports analytics dashboard.
 ## Prerequisite
 [Node.js](https://nodejs.org/fr/)\
