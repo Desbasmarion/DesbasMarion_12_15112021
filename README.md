@@ -15,5 +15,5 @@ Code for project 12 of DA Front-end path: a sports analytics dashboard.
 3. The `npm install` command will allow you to install the dependencies.
 4. The `npm start` command will allow you to run the app.
 ## Deployment
-You can visit Sportsee app on netlify with mocked data: https://sportsee-openclassrooms.netlify.app/\
+You can visit Sportsee app on netlify with mocked data: https://sportsee-openclassrooms.netlify.app/ \
 [![Netlify Status](https://api.netlify.com/api/v1/badges/95fbd7eb-b859-471a-8f5b-6850759769eb/deploy-status)](https://app.netlify.com/sites/sportsee-openclassrooms/deploys)
